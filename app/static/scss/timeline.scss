@@ -1,0 +1,26 @@
+
+@import "materialize";
+
+header {
+  min-height: 230px;
+  padding-top: 60px;
+  height: auto;
+
+  .name {
+    font-weight: 300;
+    font-size: 38px;
+
+    .lastname {
+      font-weight: 500;
+    }
+  }
+}
+
+.timeline {
+  .line {
+    display: inline-block;
+    min-height: 800px;
+    width: 15px;
+    margin: 0 3px;
+  }
+}
