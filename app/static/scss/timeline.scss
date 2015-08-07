@@ -28,5 +28,9 @@ header {
     min-height: 800px;
     width: 10px;
     margin: 0 3px;
+
+    @media #{$small-and-down} {
+    display: none;
+  }
   }
 }

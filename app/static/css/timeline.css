@@ -8299,5 +8299,8 @@ header {
   min-height: 800px;
   width: 10px;
   margin: 0 3px; }
+  @media only screen and (max-width: 600px) {
+    .timeline .line {
+      display: none; } }
 
 /*# sourceMappingURL=timeline.css.map */
