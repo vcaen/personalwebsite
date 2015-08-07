@@ -4,6 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png') }}">
     <title>About Vadim</title>
 
     <!-- CSS  -->
@@ -16,19 +18,84 @@
 <body>
 <header class="container">
 
-        <div class="center name">Vadim <span class="lastname">Caen</span></div>
+    <div class="center name">Vadim <span class="lastname">Caen</span></div>
 
-    <div class=""><h6 class="center">Student in Software Engineering</h6></div>
+    <div class=""><h6 class="center">Student in Software Engineering, graduating in 2016</h6></div>
     <div class="row"><h6 class="center">INSA Lyon, France</h6></div>
-</header>
-<div class="container">
-    <div class="container s4 center timeline">
-        <div class="line col S1 blue"></div>
-        <div class="line col S1 red"></div>
-        <div class="line col S1 orange"></div>
-        <div class="line col S1 green"></div>
-
+    <div class="row social">
+        <div class="col m4 offset-m4 s12">
+            <div class="row">
+                <div class="col s3 center"><a href="http://github.com/vcaen">
+                    <img class="responsive-img" src="{{ url_for('static', filename='image/github.png') }}">
+                </a>
+                </div>
+                <div class="col s3 center"><a href="https://fr.linkedin.com/in/vcaen">
+                    <img class="responsive-img" src="{{ url_for('static', filename='image/linkedin.png') }}">
+                </a>
+                </div>
+                <div class="col s3 center"><a href="https://twitter.com/vadimcaen">
+                    <img class="responsive-img" src="{{ url_for('static', filename='image/twitter.png') }}">
+                </a>
+                </div>
+                <div class="col s3 center"><a href="https://plus.google.com/+VadimCaen/">
+                    <img class="responsive-img" src="{{ url_for('static', filename='image/googleplus.png') }}">
+                </a>
+                </div>
+            </div>
+        </div>
     </div>
+</header>
+<div class="container timeline">
+    <div class="row">
+
+        <div class="col s5">
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='image/company_loyalty.png') }}" alt="Loyalty Company"/>
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Mobile Development Internship</span>
+                        <p>Mobile Development for a marketing company during 4 months</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title</span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col s2 center">
+
+            <div class="line blue"></div>
+            <div class="line red"></div>
+            <div class="line orange"></div>
+            <div class="line green"></div>
+
+        </div>
+        <div class="col s5">
+             <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='image/education_insa.jpg') }}" alt="INSA de Lyon"/>
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Master in Software Engineering</span>
+                        <p>Student in software engineering at INSA de Lyon. Studied various subject from technical to management</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title</span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

@@ -8283,17 +8283,21 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 header {
   min-height: 230px;
   padding-top: 60px;
+  padding-bottom: 100px;
   height: auto; }
   header .name {
     font-weight: 300;
     font-size: 38px; }
     header .name .lastname {
       font-weight: 500; }
+  header .social img {
+    height: 30px;
+    text-align: center; }
 
 .timeline .line {
   display: inline-block;
   min-height: 800px;
-  width: 15px;
+  width: 10px;
   margin: 0 3px; }
 
 /*# sourceMappingURL=timeline.css.map */
