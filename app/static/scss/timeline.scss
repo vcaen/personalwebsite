@@ -25,12 +25,27 @@ header {
 .timeline {
   .line {
     display: inline-block;
-    min-height: 800px;
+    min-height: 80px;
+    height: auto;
     width: 10px;
     margin: 0 3px;
 
 //    @media #{$small-and-down} {
 //    display: none;
 //  }
+  }
+
+  .label {
+    &.right {
+      right: 0;
+    }
+    &.left {
+      left: 0;
+    }
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
   }
 }

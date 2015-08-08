@@ -8,8 +8,12 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png') }}">
     <title>About Vadim</title>
 
+    <!-- JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+
     <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ url_for('static', filename='font/material-design-icons') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" rel="stylesheet"
           media="screen,projection"/>
     <link href="{{ url_for('static', filename='css/timeline.css') }}" type="text/css" rel="stylesheet"
@@ -22,6 +26,10 @@
 
     <div class=""><h6 class="center">Student in Software Engineering, graduating in 2016</h6></div>
     <div class="row"><h6 class="center">INSA Lyon, France</h6></div>
+    <div class="row"><h6 class="center">Website under contruction...</h6></div>
+
+
+
     <div class="row social">
         <div class="col l4 offset-l4 m10 offset-m1 s12">
             <div class="row">
@@ -45,22 +53,28 @@
         </div>
     </div>
 </header>
+
+<!-- Timeline -->
 <div class="container timeline">
     <div class="row">
 
         <div class="col s12 m5">
             <div class="row">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="{{ url_for('static', filename='image/company_loyalty.png') }}" alt="Loyalty Company"/>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ url_for('static', filename='image/company_loyalty.png') }}"
+                             alt="Loyalty Company"/>
 
                     </div>
                     <div class="card-content">
+                        <div class="red label right"></div>
                         <span class="card-title activator grey-text text-darken-4">Mobile Development Internship</span>
+
                         <p>Mobile Development for a marketing company during 4 months</p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Card Title</span>
+
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
                     </div>
 
@@ -76,7 +90,7 @@
 
         </div>
         <div class="col s12 m5 ">
-             <div class="row">
+            <div class="row">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{ url_for('static', filename='image/education_insa.jpg') }}" alt="INSA de Lyon"/>
@@ -84,10 +98,66 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Master in Software Engineering</span>
-                        <p>Student in software engineering at INSA de Lyon. Studied various subject from technical to management</p>
+                        <p>Student in software engineering at INSA de Lyon. Studied various subject from technical to
+                            management</p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Card Title</span>
+
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><div class="row">
+
+        <div class="col s12 m5">
+            <div class="row">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ url_for('static', filename='image/company_loyalty.png') }}"
+                             alt="Loyalty Company"/>
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Mobile Development Internship</span>
+
+                        <p>Mobile Development for a marketing company during 4 months</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title</span>
+
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m2 center hide-on-small-and-down">
+
+            <div class="line blue"></div>
+            <div class="line red"></div>
+            <div class="line orange"></div>
+            <div class="line green"></div>
+
+        </div>
+        <div class="col s12 m5 ">
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='image/education_insa.jpg') }}" alt="INSA de Lyon"/>
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Master in Software Engineering</span>
+
+                        <p>Student in software engineering at INSA de Lyon. Studied various subject from technical to
+                            management</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title</span>
+
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
                     </div>
 
