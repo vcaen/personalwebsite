@@ -2,8 +2,7 @@ from flask import Flask, render_template
 
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
-app.config['SERVER_NAME'] = "vcaen.com"
+
 
 
 @app.route('/')
