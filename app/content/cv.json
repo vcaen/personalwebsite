@@ -1,0 +1,26 @@
+{
+    "work": [
+        {
+            "company": "Loyalty Company",
+            "title" : "Mobile Developer Intern",
+            "short_desc": "This is a short desc",
+            "desc": "This is a long des",
+            "date_begin": "11/05/2015",
+            "end_date": "11/09/2015",
+            "picture": "company_loyalty.png"
+        }
+    ],
+    "project": [],
+    "education": [
+        {
+            "school": "INSA Lyon",
+            "degree" : "Master in Software Engineering",
+            "picture": "education_insa.jpg",
+            "desc":
+                "I have both earned technical et management skills during my studies at INSA de Lyon.\nOn the technical side,have studied C programming language on embeeded devices with a little of (MSP430, ARM)."
+
+        }
+
+    ],
+    "skills": ["Android", "Embedded System", "Linux", "Python", "JS"]
+}

@@ -1,0 +1,25 @@
+{% macro work(title, desc='', short_desc='', picture='', company='company') -%}
+    <div class="col s12 m5">
+        <div class="row">
+            <div class="card">
+                {% if picture %}
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ url_for('static', filename='image/'+picture) }}" alt="{{ company }}"/>
+                    </div>
+                {% endif %}
+                <div class="card-content activator">
+                    <div class="red label right"></div>
+                    <span class="card-title activator grey-text text-darken-4">{{ title }}</span>
+                    <p>{{ short_desc }}</p>
+                </div>
+                {% if desc %}
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ title }}</span>
+
+                        <p>{{ desc|replace("\n\n", "</p><p>")|replace("\n","<br/>") }}</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{%- endmacro %}

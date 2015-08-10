@@ -1,21 +1,9 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
+{% import 'macros/item_cards.html' as cards %}
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    {% include 'includes/head_general.html' %}
 
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png') }}">
-    <title>About Vadim</title>
-
-    <!-- JS -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
-
-    <!-- CSS  -->
-    <link href="{{ url_for('static', filename='font/material-design-icons') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" rel="stylesheet"
-          media="screen,projection"/>
     <link href="{{ url_for('static', filename='css/timeline.css') }}" type="text/css" rel="stylesheet"
           media="screen,projection"/>
 </head>
@@ -23,149 +11,67 @@
 <header class="container">
 
     <div class="center name">Vadim <span class="lastname">Caen</span></div>
-
     <div class=""><h6 class="center">Student in Software Engineering, graduating in 2016</h6></div>
     <div class="row"><h6 class="center">INSA Lyon, France</h6></div>
     <div class="row"><h6 class="center">Website under contruction...</h6></div>
 
 
-
-    <div class="row social">
-        <div class="col l4 offset-l4 m10 offset-m1 s12">
-            <div class="row">
-                <div class="col s3 center"><a href="http://github.com/vcaen">
-                    <img class="responsive-img" src="{{ url_for('static', filename='image/github.png') }}">
-                </a>
-                </div>
-                <div class="col s3 center"><a href="https://fr.linkedin.com/in/vcaen">
-                    <img class="responsive-img" src="{{ url_for('static', filename='image/linkedin.png') }}">
-                </a>
-                </div>
-                <div class="col s3 center"><a href="https://twitter.com/vadimcaen">
-                    <img class="responsive-img" src="{{ url_for('static', filename='image/twitter.png') }}">
-                </a>
-                </div>
-                <div class="col s3 center"><a href="https://plus.google.com/+VadimCaen/">
-                    <img class="responsive-img" src="{{ url_for('static', filename='image/googleplus.png') }}">
-                </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include "includes/social_row.html" %}
 </header>
 
 <!-- Timeline -->
 <div class="container timeline">
     <div class="row">
-
-        <div class="col s12 m5">
-            <div class="row">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ url_for('static', filename='image/company_loyalty.png') }}"
-                             alt="Loyalty Company"/>
-
-                    </div>
-                    <div class="card-content">
-                        <div class="red label right"></div>
-                        <span class="card-title activator grey-text text-darken-4">Mobile Development Internship</span>
-
-                        <p>Mobile Development for a marketing company during 4 months</p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title</span>
-
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-
-                </div>
+        <div class="col s12 m8 offset-m2">
+            <div class="row center">
+                <a class="s3 waves-effect waves-light btn blue">Work</a>
+                <a class="s3 waves-effect waves-light btn red">Education</a>
+                <a class="s3 waves-effect waves-light btn orange">Projects</a>
+                <a class="s3 waves-effect waves-light btn green">Skills</a>
             </div>
         </div>
-        <div class="col s12 m2 center hide-on-small-and-down">
+    </div>
+    <div class="row-lines">
+        <div class="row">
 
-            <div class="line blue"></div>
-            <div class="line red"></div>
-            <div class="line orange"></div>
-            <div class="line green"></div>
 
-        </div>
-        <div class="col s12 m5 ">
-            <div class="row">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ url_for('static', filename='image/education_insa.jpg') }}" alt="INSA de Lyon"/>
+            {{ cards.work(
+                        "Mobile Development Intern",
+                        "Mobile Development for a marketing company during 4 months",
+                        "This is a test for description",
+                        "company_loyalty.png",
+                        "Loyalty Company") }}
 
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Master in Software Engineering</span>
-                        <p>Student in software engineering at INSA de Lyon. Studied various subject from technical to
-                            management</p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title</span>
+            {% include 'includes/middle_line.html' %}
+            <div class="col s12 m5 offset-m2">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename='image/education_insa.jpg') }}" alt="INSA de Lyon"/>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Master in Software Engineering</span>
 
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
+                            <p>
+                                Student in software engineering at INSA de Lyon. Studied various subject from technical
+                                to
+                                management
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title</span>
 
-                </div>
-            </div>
-        </div>
-    </div><div class="row">
-
-        <div class="col s12 m5">
-            <div class="row">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ url_for('static', filename='image/company_loyalty.png') }}"
-                             alt="Loyalty Company"/>
-
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Mobile Development Internship</span>
-
-                        <p>Mobile Development for a marketing company during 4 months</p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title</span>
-
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m2 center hide-on-small-and-down">
-
-            <div class="line blue"></div>
-            <div class="line red"></div>
-            <div class="line orange"></div>
-            <div class="line green"></div>
-
-        </div>
-        <div class="col s12 m5 ">
-            <div class="row">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ url_for('static', filename='image/education_insa.jpg') }}" alt="INSA de Lyon"/>
+                            <p>
+                                Here is some more information about this product that is only revealed once clicked
+                                on.
+                            </p>
+                        </div>
 
                     </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Master in Software Engineering</span>
-
-                        <p>Student in software engineering at INSA de Lyon. Studied various subject from technical to
-                            management</p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title</span>
-
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 </body>
 </html>

@@ -22,11 +22,20 @@ header {
   }
 }
 
+.row-lines{
+  position: relative;
+  .line-style{
+    position: absolute;
+    top: 5px;
+    left: 45%;
+    height: 105%;
+  }
+}
 .timeline {
   .line {
     display: inline-block;
     min-height: 80px;
-    height: auto;
+    height: 100%;
     width: 10px;
     margin: 0 3px;
 
