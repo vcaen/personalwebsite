@@ -3,7 +3,6 @@ __author__ = 'vcaen'
 
 class Item(object):
 
-
     def __init__(self, title, short_desc, desc, picture):
         self.title = title
         self.short_desc = short_desc

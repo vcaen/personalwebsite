@@ -10,7 +10,14 @@
             "picture": "company_loyalty.png"
         }
     ],
-    "project": [],
+    "project": [
+        {
+            "title": "FollowMyLyon",
+            "short_desc":"",
+            "desc": "",
+            "url": ""
+        }
+    ],
     "education": [
         {
             "school": "INSA Lyon",

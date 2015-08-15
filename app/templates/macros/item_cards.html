@@ -1,25 +1,36 @@
-{% macro work(title, desc='', short_desc='', picture='', company='company') -%}
-    <div class="col s12 m5">
+{% macro base(title, short_desc='', desc='', picture='', alt='', position='left' ) -%}
+    <div class="col s12 m5 {{ 'offset-m2' if position == 'right' }}">
         <div class="row">
             <div class="card">
                 {% if picture %}
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ url_for('static', filename='image/'+picture) }}" alt="{{ company }}"/>
+                        <img class="activator" src="{{ url_for('static', filename='image/'+picture) }}" alt="{{ alt }}"/>
                     </div>
                 {% endif %}
                 <div class="card-content activator">
-                    <div class="red label right"></div>
-                    <span class="card-title activator grey-text text-darken-4">{{ title }}</span>
+                    <span class="card-title activator grey-text text-darken-4">{{ title  + " " + position}}</span>
                     <p>{{ short_desc }}</p>
+                    {{ caller() }}
                 </div>
                 {% if desc %}
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{ title }}</span>
 
-                        <p>{{ desc|replace("\n\n", "</p><p>")|replace("\n","<br/>") }}</p>
+                        <p>{{ desc|nl2br }}</p>
                     </div>
                 {% endif %}
             </div>
         </div>
     </div>
-{%- endmacro %}
+{% endmacro %}
+
+{% macro education(education, position) %}
+    {% call base(education.degree, education.school, education.desc, education.picture, alt=education.school, position=position) %}
+    {% endcall %}
+{% endmacro %}
+
+{% macro work(work, position='left') %}
+    {% call base(work.title, work.short_desc, work.desc, work.picture, work.alt, position) %}
+    {% endcall %}
+{% endmacro %}
+
