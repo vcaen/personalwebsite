@@ -8317,5 +8317,8 @@ header {
     right: 0; }
   .timeline .label.left {
     left: 0; }
+.timeline .card p.details {
+  font-style: italic;
+  font-weight: 300; }
 
 /*# sourceMappingURL=timeline.css.map */

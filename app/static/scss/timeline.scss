@@ -57,4 +57,11 @@ header {
     bottom: 0;
     width: 6px;
   }
+
+  .card {
+    p.details {
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
 }

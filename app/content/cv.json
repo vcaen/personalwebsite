@@ -1,33 +1,59 @@
 {
-    "work": [
-        {
-            "company": "Loyalty Company",
-            "title" : "Mobile Developer Intern",
-            "short_desc": "This is a short desc",
-            "desc": "This is a long des",
-            "date_begin": "11/05/2015",
-            "end_date": "11/09/2015",
-            "picture": "company_loyalty.png"
-        }
-    ],
-    "project": [
-        {
-            "title": "FollowMyLyon",
-            "short_desc":"",
-            "desc": "",
-            "url": ""
-        }
-    ],
-    "education": [
-        {
-            "school": "INSA Lyon",
-            "degree" : "Master in Software Engineering",
-            "picture": "education_insa.jpg",
-            "desc":
-                "I have both earned technical et management skills during my studies at INSA de Lyon.\nOn the technical side,have studied C programming language on embeeded devices with a little of (MSP430, ARM)."
-
-        }
-
-    ],
-    "skills": ["Android", "Embedded System", "Linux", "Python", "JS"]
+  "work": [
+    {
+      "company": "Loyalty Company",
+      "title": "Mobile Developer Intern",
+      "short_desc": "Developed Android, iOS and Javascript application for a marketing company.",
+      "desc": "I developed mostly Android applications, but also some iOS and Javascript application for the clients of Loyalty Company, a marketing agency based in Lyon, France. I had the chance to be very autonomous, so I could choose myself the architecture of my projects.\n During this internship, I faced short deadlines, which is quit exciting as you have to work like in a Hackathon somtime. But what I've enjoyed the most was to have a global overview of the projects' process by talking a lot with the marketing project's managers and the technical managers.",
+      "date_begin": "11/05/2015",
+      "end_date": "11/09/2015",
+      "picture": "company_loyalty.png",
+      "technologies": "Android, Javascript, iOS"
+    },
+    {
+      "company": "ATOS Worldline",
+      "title": "System and software developer",
+      "short_desc": "Migrate an existing set of applications to the Redhat Openshift platform",
+      "desc": "My mission during this internship was to migrate an existing set of applications connected alltogether by a bus (Geoserver, admin panel, Rok4..) to the company's openshift server. I've done a lot of linux configuration, openshift cartriges creation and some java to prepare the applications to be used as a PaaS",
+      "date_begin": "11/05/2015",
+      "end_date": "11/09/2015",
+      "picture": "company_worldline.jpg",
+      "technologies": "Linux, Java, ShellScript, Openshift, Vagrant"
+    }
+  ],
+  "project": [
+    {
+      "title": "FollowMyLyon",
+      "short_desc": "",
+      "desc": "",
+      "url": ""
+    }
+  ],
+  "education": [
+    {
+      "school": "INSA Lyon, France",
+      "degree": "M.Sc in Software and IT Engineering",
+      "picture": "education_insa.jpg",
+      "desc": "I have earned both engineering et management skills during my studies at INSA de Lyon.\nOn the technical side, I learnt C programming language on embedded devices like MSP430 and ARM devices.\n I have also learn to understand, analyse and design large maintainable information system process for companies."
+    },
+    {
+      "school": "VIA University College, Horsens, Danemark",
+      "degree": "Erasmus exchange",
+      "picture": "education_horsens.jpg",
+      "desc": "I did my fourth semester of my associate degree in Denmark, to discover what it's like to live abroad and to improve my English.\n I took courses on Android programming, Embedded system and Security"
+    },
+    {
+      "school": "IUT Robert Schuman, Strasbourg, France",
+      "degree": "Associate Degree in Software Engineering",
+      "picture": "education_iut.jpg",
+      "desc": "Technical degree in computer sciences. My main subjects were Java Programming, Algorithm, Database Design and SQL, Website development"
+    }
+  ],
+  "skills": [
+    "Android",
+    "Embedded System",
+    "Linux",
+    "Python",
+    "JS"
+  ]
 }
