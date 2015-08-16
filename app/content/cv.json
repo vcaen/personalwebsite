@@ -28,7 +28,8 @@
       "date_begin": "01/05/2015",
       "end_date": "01/11/2015",
       "picture": "company_etic.png",
-      "technologies": "Android, Facebook SDK"
+      "technologies": "Android, Facebook SDK",
+      "size" : "small"
     }
 
   ],

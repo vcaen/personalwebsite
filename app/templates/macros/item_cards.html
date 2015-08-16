@@ -1,7 +1,7 @@
-{% macro base(title, short_desc='', desc='', picture='', alt='', position='left', details='' ) -%}
+{% macro base(title, short_desc='', desc='', picture='', alt='', position='left', details='', size="medium" ) -%}
     <div class="col s12 m5 {{ 'offset-m2' if position == 'right' }}">
         <div class="row">
-            <div class="card">
+            <div class="card {{ size }} hoverable">
                 {% if picture %}
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{ url_for('static', filename='image/'+picture) }}" alt="{{ alt }}"/>
@@ -16,11 +16,8 @@
                     {{ caller() }}
                 </div>
                 {% if desc %}
-                    <div class="card-action activator">
-                    More info
-                    </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">{{ title }}</span>
+                        <span class="card-title grey-text text-darken-4">{{ title }}<i class="material-icons right">close</i></span>
 
                         <p>{{ desc|nl2br }}</p>
                     </div>
@@ -36,7 +33,7 @@
 {% endmacro %}
 
 {% macro work(work, position='left') %}
-    {% call base(work.title, work.short_desc, work.desc, work.picture, work.alt, position, details=work.technologies) %}
+    {% call base(work.title, work.short_desc, work.desc, work.picture, work.alt, position, details=work.technologies, size=work.size) %}
     {% endcall %}
 {% endmacro %}
 
