@@ -39,19 +39,21 @@
         {% include 'includes/middle_line.html' %}
         {% set card_number = 0 %}
 
-        {% for item in cv.work + cv.education %}
+        {% for item in cv.work + cv.education + cv.project %}
             {% if card_number % 2 == 0 %}
                 <div class="row">
             {% endif %}
-        {% if item.company %}
-            {{ cards.work(item, position= 'left' if card_number % 2 == 0 else 'right') }}
-        {% elif item.school %}
-            {{ cards.education(item, position= 'left' if card_number % 2 == 0 else 'right') }}
-        {% endif %}
+            {% if item.company %}
+                {{ cards.work(item, position= 'left' if card_number % 2 == 0 else 'right') }}
+            {% elif item.school %}
+                {{ cards.education(item, position= 'left' if card_number % 2 == 0 else 'right') }}
+            {% else %}
+                {{ cards.project(item, position= 'left' if card_number % 2 == 0 else 'right') }}
+            {% endif %}
 
-        {% if loop.index % 2 == 0 %}
-            </div>
-        {% endif %}
+            {% if loop.index % 2 == 0 %}
+                </div>
+            {% endif %}
             {% set card_number = card_number + 1 %}
         {% endfor %}
 

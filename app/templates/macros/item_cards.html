@@ -1,14 +1,19 @@
-{% macro base(title, short_desc='', desc='', picture='', alt='', position='left', details='', size="medium" ) -%}
-    <div class="col s12 m5 {{ 'offset-m2' if position == 'right' }}">
+{% macro base(title, short_desc='', desc='', picture='', alt='',
+                position='left', details='', size="medium", class="" ) -%}
+
+    <div class="col s12 m5 {{ 'offset-l2 offset-m2'  if position == 'right' }} item {{ class }}">
         <div class="row">
             <div class="card {{ size }} hoverable">
                 {% if picture %}
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ url_for('static', filename='image/'+picture) }}" alt="{{ alt }}"/>
+                        <img class="activator" src="{{ url_for('static', filename='image/'+picture) }}"
+                             alt="{{ alt }}"/>
                     </div>
                 {% endif %}
+                <div class="item-marker {{ position }}"></div>
                 <div class="card-content activator">
-                    <span class="card-title activator text-darken-4 black-text text-accent-4">{{ title}}</span>
+                    <span class="title card-title activator text-darken-4 black-text text-accent-4">{{ title }}</span>
+
                     <p>{{ short_desc }}</p>
                     {% if details %}
                         <p class="details">{{ details }}</p>
@@ -28,12 +33,27 @@
 {% endmacro %}
 
 {% macro education(education, position) %}
-    {% call base(education.degree, education.school, education.desc, education.picture, alt=education.school, position=position) %}
+    {% call base(education.degree, education.school, education.desc, education.picture,
+         alt=education.school,
+         position=position,
+         size=education.size,
+         class="education") %}
     {% endcall %}
 {% endmacro %}
 
 {% macro work(work, position='left') %}
-    {% call base(work.title, work.short_desc, work.desc, work.picture, work.alt, position, details=work.technologies, size=work.size) %}
+    {% call base(work.title, work.short_desc, work.desc, work.picture, work.alt, position,
+        details=work.technologies,
+        size=work.size,
+        class="work") %}
+    {% endcall %}
+{% endmacro %}
+
+{% macro project(project, position='left') %}
+    {% call base(project.title, project.short_desc, project.desc, project.picture, project.alt, position,
+        details=project.technologies,
+        size=project.size,
+        class="project") %}
     {% endcall %}
 {% endmacro %}
 
