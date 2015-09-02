@@ -10,11 +10,15 @@
 <body>
 <header class="container">
 
-    <div class="row center hide-on-small-and-down"><div class="col m2 offset-m5 center "><img src="{{ url_for('static', filename='image/me.jpg') }}" alt="" class="circle responsive-img z-depth-1"> </div></div>
+    <div class="row center hide-on-small-and-down">
+        <div class="col m2 offset-m5 center "><img src="{{ url_for('static', filename='image/me.jpg') }}" alt=""
+                                                   class="circle responsive-img z-depth-1"></div>
+    </div>
     <div class="center name">Vadim <span class="lastname">Caen</span></div>
     <div class=""><h6 class="center">Student in Software Engineering, graduating in 2016</h6></div>
     <div class="row"><h6 class="center">INSA Lyon, France</h6></div>
     <div class="row"><h6 class="center">Website under contruction...</h6></div>
+    <div class="row"><a href="/cv.pdf"><h6 class="center">Get my CV !</h6></a></div>
 
 
     {% include "includes/social_row.html" %}
@@ -32,7 +36,7 @@
 <div class="container timeline">
 
     <div class="row-lines">
-
+        {% include 'includes/middle_line.html' %}
         {% set card_number = 0 %}
 
         {% for item in cv.work + cv.education %}
@@ -45,10 +49,7 @@
             {{ cards.education(item, position= 'left' if card_number % 2 == 0 else 'right') }}
         {% endif %}
 
-        {% if loop.index % 2 == 1 %}
-            {% include 'includes/middle_line.html' %}
-
-        {% else %}
+        {% if loop.index % 2 == 0 %}
             </div>
         {% endif %}
             {% set card_number = card_number + 1 %}

@@ -19,7 +19,19 @@
       "end_date": "11/09/2015",
       "picture": "company_worldline.jpg",
       "technologies": "Linux, Java, ShellScript, Openshift, Vagrant"
+    },
+    {
+      "company": "ETIC Junior Enterprise",
+      "title": "Android developer",
+      "short_desc": "Developed a Tinder like application for a junior enterprise's client",
+      "desc": "This was my first real android project, with a real client. I had to respect a precise design given by the client and also implements the famous Tinder card animation (there was no library at the time).\nI also dove into the Android Facebook SDK as the application had a string integtration with Facebook.",
+      "date_begin": "01/05/2015",
+      "end_date": "01/11/2015",
+      "picture": "company_etic.png",
+      "technologies": "Android, Facebook SDK",
+      "size" : "small"
     }
+
   ],
   "project": [
     {
