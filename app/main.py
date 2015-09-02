@@ -13,7 +13,7 @@ app = Flask(__name__)
 def show_about():
     return cv_controller.CVController().renderCVToHTML()
 
-@app.route('/:filename')
+@app.route('/<filename>')
 def serve_public_file(filename):
     path = os.path.join(APP_STATIC, "file", "public")
     return send_from_directory(path,filename)
