@@ -7910,7 +7910,7 @@ header {
     position: absolute;
     top: 5px;
     left: 45%;
-    height: 105%; }
+    height: 100%; }
 
 .timeline .line {
   display: inline-block;
@@ -7939,5 +7939,11 @@ header {
   z-index: 2; }
   .item-marker-base.left, .timeline .item.work .left.item-marker, .timeline .item.education .left.item-marker, .timeline .item.project .left.item-marker {
     right: 0px; }
+
+.skills h2 {
+  font-weight: 200; }
+.skills li {
+  color: white;
+  margin: 5px auto; }
 
 /*# sourceMappingURL=timeline.css.map */

@@ -34,7 +34,7 @@ header {
     position: absolute;
     top: 5px;
     left: 45%;
-    height: 105%;
+    height: 100%;
   }
 }
 
@@ -102,5 +102,15 @@ header {
   }
   &.right {
 
+  }
+}
+
+.skills {
+  h2 {
+    font-weight: 200;
+  }
+  li {
+    color:white;
+    margin: 5px auto;
   }
 }
