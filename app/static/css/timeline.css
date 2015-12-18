@@ -7900,6 +7900,9 @@ header {
   header .social img {
     height: 30px;
     text-align: center; }
+  header .description p {
+    max-width: 500px;
+    margin: auto auto 20px; }
 
 .row-lines {
   position: relative; }

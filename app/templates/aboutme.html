@@ -14,10 +14,11 @@
         <div class="col m2 offset-m5 center "><img src="{{ url_for('static', filename='image/me.jpg') }}" alt=""
                                                    class="circle responsive-img z-depth-1"></div>
     </div>
+
     <div class="center name">Vadim <span class="lastname">Caen</span></div>
-    <div class=""><h6 class="center">Student in Software Engineering, graduating in 2016</h6></div>
+    <div class=""><h6 class="center">Student in M.Sc Software Engineering, graduating in 2016</h6></div>
     <div class="row"><h6 class="center">INSA Lyon, France</h6></div>
-    <div class="row"><h6 class="center">Website under contruction...</h6></div>
+    <div class="row"><h6 class="description">{% include 'includes/description.html' %}</h6></div>
     <div class="row"><a href="/cv.pdf"><h6 class="center">Get my CV !</h6></a></div>
 
 
@@ -25,7 +26,7 @@
 </header>
 <div class="row center">
     <div class="col s12 l8 offset-l2">
-        <div class="col s6 m3 "><a class="waves-effect waves-light btn blue">Work</a></div>
+        <div class="col s6 m3 scrollTo"><a class="waves-effect waves-light btn blue">Work</a></div>
         <div class="col s6 m3 "><a class="waves-effect waves-light btn red">Education</a></div>
         <div class="col s6 m3 "><a class="waves-effect waves-light btn orange">Projects</a></div>
         <div class="col s6 m3 "><a class="waves-effect waves-light btn green">Skills</a></div>
@@ -43,17 +44,17 @@
             {% if card_number % 2 == 0 %}
                 <div class="row">
             {% endif %}
-            {% if item.company %}
-                {{ cards.work(item, position= 'left' if card_number % 2 == 0 else 'right') }}
-            {% elif item.school %}
-                {{ cards.education(item, position= 'left' if card_number % 2 == 0 else 'right') }}
-            {% else %}
-                {{ cards.project(item, position= 'left' if card_number % 2 == 0 else 'right') }}
-            {% endif %}
+        {% if item.company %}
+            {{ cards.work(item, position= 'left' if card_number % 2 == 0 else 'right') }}
+        {% elif item.school %}
+            {{ cards.education(item, position= 'left' if card_number % 2 == 0 else 'right') }}
+        {% else %}
+            {{ cards.project(item, position= 'left' if card_number % 2 == 0 else 'right') }}
+        {% endif %}
 
-            {% if loop.index % 2 == 0 %}
-                </div>
-            {% endif %}
+        {% if loop.index % 2 == 0 %}
+            </div>
+        {% endif %}
             {% set card_number = card_number + 1 %}
         {% endfor %}
 

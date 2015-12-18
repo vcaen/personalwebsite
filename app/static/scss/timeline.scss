@@ -21,6 +21,11 @@ header {
     height: 30px;
     text-align: center;
   }
+
+  .description p {
+    max-width: 500px;
+    margin: auto auto 20px;
+  }
 }
 
 .row-lines {
@@ -77,7 +82,7 @@ header {
       }
     }
 
-     &.project {
+    &.project {
       .item-marker {
         @extend .item-marker-base;
         @extend .orange;
