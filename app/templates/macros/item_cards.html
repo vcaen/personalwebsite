@@ -12,7 +12,11 @@
                 {% endif %}
                 <div class="item-marker {{ position }}"></div>
                 <div class="card-content activator">
-                    <span class="title card-title activator text-darken-4 black-text text-accent-4">{{ title }}</span>
+                    <span class="category">{{ class }}</span><br>
+                    <span class="title card-title activator text-darken-4 black-text text-accent-4">
+                        {{ title }}
+                    </span>
+
 
                     <p>{{ short_desc }}</p>
                     {% if details %}

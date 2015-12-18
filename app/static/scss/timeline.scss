@@ -68,23 +68,29 @@ header {
     }
   }
   .item {
+    .item-marker {
+      @extend .item-marker-base;
+    }
+    .category {
+        font-size: 10px;
+        color: white;
+        padding: 2px;
+      }
     &.work {
-      .item-marker {
-        @extend .item-marker-base;
+      .item-marker, .category{
         @extend .blue;
       }
+
     }
 
     &.education {
-      .item-marker {
-        @extend .item-marker-base;
+      .item-marker, .category {
         @extend .red;
       }
     }
 
     &.project {
-      .item-marker {
-        @extend .item-marker-base;
+      .item-marker, .category {
         @extend .orange;
       }
     }
