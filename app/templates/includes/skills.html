@@ -8,24 +8,31 @@
 {% endmacro %}
 
 <div class="container skills">
+    <h2 class="row center green white-text ">Skills</h2>
     <div class="row center">
-        <h2 class="green white-text ">Skills</h2>
-
         <div class="col m10">
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <h3>Programming</h3>
+            <canvas id="chart-coding" width="400" height="400"></canvas>
         </div>
         <div class="col m2">
-            <div id="labels"></div>
+            <div id="labels-coding"></div>
+        </div>
+    </div>
+    <div class="row center">
+        <div class="col m10">
+            <h3>Other</h3>
+            <canvas id="chart-other" width="400" height="400"></canvas>
+        </div>
+        <div class="col m2">
+            <div id="labels-other"></div>
         </div>
     </div>
 </div>
 
 
 <script>
-    var ctx = document.getElementById("myChart").getContext("2d");
-
-
-    var data = [
+    var ctxCoding = document.getElementById("chart-coding").getContext("2d");
+    var dataCoding = [
         {
             value: 5,
             color: "#4caf50",
@@ -55,8 +62,32 @@
             color: "#ff5722",
             highlight: "#ff7043",
             label: "C++"
-        },
+        }
     ];
+
+    var ctxOther = document.getElementById("chart-other").getContext("2d");
+    var dataOther = [
+        {
+            value: 5,
+            color: "#4caf50",
+            highlight: "#66bb6a",
+            label: "Project Management"
+        },
+        {
+            value: 4,
+            color: "#0288d1",
+            highlight: "#039be5",
+            label: "UML"
+        },
+        {
+            value: 3,
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "Image Editing (GIMP)"
+        }
+    ];
+
+
 
     var options = {
         name: "skills",
@@ -89,9 +120,12 @@
         legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){ %><li style=\"background-color:<%=segments[i].fillColor%>\"><%if(segments[i].label){ %><%=segments[i].label%><%}%></li><%}%></ul>"
 
     };
-    var myRadarChart = new Chart(ctx).Doughnut(data, options);
+    var codingChart = new Chart(ctxCoding).Doughnut(dataCoding, options);
+    var otherChart = new Chart(ctxOther).Doughnut(dataOther, options);
 
-    document.getElementById("labels").innerHTML = myRadarChart.generateLegend();
+
+    document.getElementById("labels-coding").innerHTML = codingChart.generateLegend();
+    document.getElementById("labels-other").innerHTML = otherChart.generateLegend();
 
 
 </script>
