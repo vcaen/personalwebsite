@@ -7927,13 +7927,17 @@ header {
     right: 0; }
   .timeline .label.left {
     left: 0; }
+.timeline .card .card-content .card-title {
+  line-height: 24px;
+  margin-top: 8px; }
 .timeline .card p.details {
   font-style: italic;
   font-weight: 300; }
 .timeline .item .category {
+  display: inline-block;
   font-size: 10px;
   color: white;
-  padding: 2px; }
+  padding: 2px 3px; }
 
 .item-marker-base, .timeline .item .item-marker {
   position: absolute;

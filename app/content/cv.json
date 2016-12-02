@@ -1,5 +1,25 @@
 {
   "work": [
+     {
+      "company": "Google, London",
+      "title": "Software Engineer",
+      "short_desc": "Working on Android Studio",
+      "desc": "This is the beginning of a great adventure",
+      "date_begin": "09/01/2017",
+      "end_date": "",
+      "picture": "google_uk.jpg",
+      "technologies": "Java"
+    },
+    {
+      "company": "Google, Mountain View",
+      "title": "Software Engineer Intern",
+      "short_desc": "Created new features on Android Studio",
+      "desc": "This was my end of study internship. I was based in Mountain View, in the Google HQ, and I worked in the Android Studio team building new features for the software (that I cannot disclose). I had the full responsibility of my project. This was an unique experience since I had the chance to work with some awesome engineers who played a big part in the making of Android.\nI did mostly UI programming and image analysis algorithms.",
+      "date_begin": "02/06/2016",
+      "end_date": "23/09/2016",
+      "picture": "google_mtv.jpg",
+      "technologies": "Java"
+    },
     {
       "company": "Loyalty Company",
       "title": "Mobile Developer Intern",

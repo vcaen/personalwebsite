@@ -19,15 +19,6 @@
             <div id="labels-coding"></div>
         </div>
     </div>
-    <div class="row center">
-        <div class="col m10">
-            <h3>Other</h3>
-            <canvas id="chart-other" width="400" height="400"></canvas>
-        </div>
-        <div class="col m2">
-            <div id="labels-other"></div>
-        </div>
-    </div>
 </div>
 
 
@@ -39,6 +30,12 @@
             color: "#4caf50",
             highlight: "#66bb6a",
             label: "Android (Java)"
+        },
+        {
+            value: 6,
+            color: "#3B8386",
+            highlight: "#5E9C9F",
+            label: "Java"
         },
         {
             value: 4,
@@ -59,34 +56,6 @@
             color: "#e53935",
             highlight: "#f44336",
             label: "C"
-        },
-        {
-            value: 2,
-            color: "#ff5722",
-            highlight: "#ff7043",
-            label: "C++"
-        }
-    ];
-
-    var ctxOther = document.getElementById("chart-other").getContext("2d");
-    var dataOther = [
-        {
-            value: 5,
-            color: "#4caf50",
-            highlight: "#66bb6a",
-            label: "Project Management"
-        },
-        {
-            value: 4,
-            color: "#0288d1",
-            highlight: "#039be5",
-            label: "UML"
-        },
-        {
-            value: 3,
-            color: "#FDB45C",
-            highlight: "#FFC870",
-            label: "Image Editing (GIMP)"
         }
     ];
 

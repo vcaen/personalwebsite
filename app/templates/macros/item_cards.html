@@ -12,10 +12,10 @@
                 {% endif %}
                 <div class="item-marker {{ position }}"></div>
                 <div class="card-content activator">
-                    <span class="category">{{ class }}</span><br>
-                    <span class="title card-title activator text-darken-4 black-text text-accent-4">
+                    <div class="category">{{ class }}</div>
+                    <div class="title card-title activator text-darken-4 black-text text-accent-4">
                         {{ title }}
-                    </span>
+                    </div>
 
 
                     <p>{{ short_desc }}</p>
@@ -46,7 +46,7 @@
 {% endmacro %}
 
 {% macro work(work, position='left') %}
-    {% call base(work.title, work.short_desc, work.desc, work.picture, work.alt, position,
+    {% call base(work.title + " @ " + work.company, work.short_desc, work.desc, work.picture, work.alt, position,
         details=work.technologies,
         size=work.size,
         class="work") %}
